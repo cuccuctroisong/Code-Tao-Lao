@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+void BinaryString(int n , string s)
+{
+    if (n == 0) cout << s << " ";
+    
+    else
+    {
+        BinaryString(n-1 , s + '0');
+        BinaryString(n-1 , s + '1');
+    }
+    
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    string s;
+    
+    BinaryString(n , s );
+    return 0;
+}
